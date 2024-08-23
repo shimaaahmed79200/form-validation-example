@@ -25,8 +25,6 @@ const formik = useFormik({
         email: Yup.string().email("Invalid email address").required("Required"),
         age: Yup.number().required("Required"),
         query: Yup.boolean(),
-        // .min(6, "Password must be at least 6 characters")
-        // .required("Password is required"),
         message: Yup.string()
         .required("Please Enter your message"),
         check: Yup.boolean().required("Please Check that"),
@@ -91,7 +89,7 @@ const formik = useFormik({
     </div>
 
     <div>
-        <label>Age</label>
+        <label>Age*</label>
         <input
         className="input"
             type="number"
@@ -106,10 +104,10 @@ const formik = useFormik({
         </div>
 
     <div>
-        <label>Query Type</label>
+        <label>Query Type*</label>
         <div className="null">
             <div className="rad">
-            <label >General Query
+            <label >General </label>
         <input
             className="input"
             type="radio"
@@ -119,11 +117,11 @@ const formik = useFormik({
             onBlur={formik.handleBlur}
             
         />
-        </label>
+        
             </div>
         
         <div className="rad">
-        <label > Support Query 
+        <label> Support </label>
             <input 
             className="input"
             type="radio"
@@ -131,7 +129,7 @@ const formik = useFormik({
             value={formik.values.query}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-        /> </label>
+        /> 
         </div>
         
         
@@ -143,7 +141,7 @@ const formik = useFormik({
         </div>
 
         <div>
-        <label>Message</label>
+        <label>Message*</label>
         <input
         className="input area"
             type="textarea"
